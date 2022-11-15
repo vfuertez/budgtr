@@ -9,24 +9,12 @@
     <link rel="stylesheet" href="../public/skeleton.css">
 </head>
 <body>
-    <h1> Budgtr ALL</h1>
+    <h1></h1>
     <div class="container">
 
-<% for (let i = 0; i < theBudget.length; i++) { %>
-    <% const budget = theBudget[i] %>
-    <% const budgetName = budget.name %>
-    <% const budgetDate = budget.date %>
-    <% const budgetAmount = budget.amount %>
-    <table>
-<tr>
-    <td ><%=budgetDate %></td>
-<td colspan='4'><a href="/budget/<%=i %>"><%=budgetName %> </a></td>
-<td><%=budgetAmount %></td>
 
-</tr>
-</table>
- <% } %>
 
     </div>
+
 </body>
 </html>

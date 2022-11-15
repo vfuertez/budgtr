@@ -8,14 +8,14 @@ const budget = require('./models/budget')
 app.use("/public", express.static("public"))
 
 app.get('/budgets', (request, response) => {
-response.send('hello world')
+response.render("index.ejs",{
+    theBudget: budget
+})
 });
 
 
 app.get('/budgets/:index', (request, response) => {
-response.render("index.ejs",{
-    theBudget: budget
-} )
+response.render("")
 });
 
 app.get('/budgets/new', (request, response) => {
