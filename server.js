@@ -2,10 +2,14 @@ require("dotenv").config()
 const express = require('express')
 const app = express()
 const budget = require('./models/budget')
+const methodOverride = require("method-override")
 //const PORT = process.env.PORT
 
 // static file
 app.use("/public", express.static("public"))
+app.use(methodOverride("_method"))
+
+
 
 app.get('/budgets', (request, response) => {
 response.render("index.ejs",{
@@ -22,8 +26,10 @@ response.render("show.ejs",{
 });
 
 app.get('/budgets/new', (request, response) => {
-response.render("")
+response.render("new.ejs")
 });
+// when I go to this route I get an error from show.ejs
+
 
 app.post('/budgets', (request, response) => {
 
