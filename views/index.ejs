@@ -10,6 +10,8 @@
 </head>
 <body>
     <h1> Budgtr ALL</h1>
+    <a href="/budgets/new"><button>Make</button></a>
+
     <div class="container">
 
 <% for (let i = 0; i < theBudget.length; i++) { %>
@@ -20,7 +22,7 @@
     <table>
 <tr>
     <td ><%=budgetDate %></td>
-<td colspan='4'><a href="/budget/<%=i %>"><%=budgetName %> </a></td>
+<td colspan='4'><a href="/budgets/<%=i %>"><%=budgetName %> </a></td>
 <td><%=budgetAmount %></td>
 
 </tr>

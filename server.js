@@ -2,7 +2,7 @@ require("dotenv").config()
 const express = require('express')
 const app = express()
 const budget = require('./models/budget')
-// const PORT = process.env.PORT
+//const PORT = process.env.PORT
 
 // static file
 app.use("/public", express.static("public"))
@@ -15,11 +15,14 @@ response.render("index.ejs",{
 
 
 app.get('/budgets/:index', (request, response) => {
-response.render("")
+response.render("show.ejs",{
+    theBudget: budget[request.params.index],
+    index: request.params.index
+} )
 });
 
 app.get('/budgets/new', (request, response) => {
-
+response.render("")
 });
 
 app.post('/budgets', (request, response) => {
