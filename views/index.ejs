@@ -18,16 +18,14 @@
 
 <a href="/budgets/new"><button>Make</button></a>
 
-<% for (let i = 0; i < theBudget.length; i++) { %>
-    <% const budget = theBudget[i] %>
-    <% const budgetName = budget.name %>
-    <% const budgetDate = budget.date %>
-    <% const budgetAmount = budget.amount %>
+<% for (let i = 0; i < budget.length; i++) { %>
+    
+   
     <table>
 <tr>
-    <td ><%=budgetDate %></td>
-<td colspan='4'><a href="/budgets/<%=i %>"><%=budgetName %> </a></td>
-<td><%=budgetAmount %></td>
+    <td><%=budget[i].date %></td>
+<td colspan='4'><a href="/budgets/<%=i %>"><%=budget[i].name %> </a></td>
+<td><%=budget[i].amount %></td>
 
 </tr>
 </table>
